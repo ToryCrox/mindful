@@ -11,6 +11,7 @@ export 'src/utils/debounce.dart';
 export 'src/utils/dynamic_util.dart';
 export 'src/utils/file_util.dart';
 export 'src/utils/logger.dart';
+export 'src/utils/logger_pretty_printer.dart';
 export 'src/utils/prefs_helper.dart';
 export 'src/utils/reg_text_match_tool.dart';
 export 'src/utils/system_util.dart';
