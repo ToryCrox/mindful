@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import '../../common.dart';
+import './slotted_render_object_widget.dart' as sr;
 
 /// 拷贝自 [ListTile]，目标是自适应高度，更高的定制自由度
 /// 去掉dense和visualDensity
@@ -531,7 +532,7 @@ enum _ListTileSlot {
   background,
 }
 
-class _ListTile extends RenderObjectWidget with SlottedMultiChildRenderObjectWidgetMixin<_ListTileSlot> {
+class _ListTile extends RenderObjectWidget with sr.SlottedMultiChildRenderObjectWidgetMixin<_ListTileSlot> {
   const _ListTile({
     this.leading,
     required this.title,
@@ -617,7 +618,7 @@ class _ListTile extends RenderObjectWidget with SlottedMultiChildRenderObjectWid
   }
 }
 
-class _RenderListTile extends RenderBox with SlottedContainerRenderObjectMixin<_ListTileSlot> {
+class _RenderListTile extends RenderBox with sr.SlottedContainerRenderObjectMixin<_ListTileSlot> {
   _RenderListTile({
     required bool isThreeLine,
     required TextDirection textDirection,
